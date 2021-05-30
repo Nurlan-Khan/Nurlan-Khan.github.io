@@ -1,0 +1,87 @@
+<html>
+<body style = "text-align: center; font-family: helvetica;">
+
+<script type = "text / javascript">
+
+/ *
+* Получено из World Populution Counter - на основе JavaScript Kit (http://www.javascriptkit.com) и кода Адама Брауна.
+* /
+
+function maind () {
+	startdate = новая дата ()
+	сейчас (startdate.getYear (), startdate.getMonth (), startdate.getDate (), startdate.getHours (), startdate.getMinutes (), startdate.getSeconds ())
+}
+
+
+function ChangeValue (число, pv) {
+	numberstring = ""
+	var j = 0 
+	var i = 0
+	в то время как (число> 1)
+	 { 
+
+	    numberstring = (Math.round (number-0.5)% 10) + numberstring
+	    число = число / 10
+	    j ++
+	    if (число> 1 && j == 3) { 
+			numberstring = "," + numberstring 
+			j = 0}
+	    я ++
+	 }
+
+	 numberstring = числовая строка
+
+if (pv == 1) {document.getElementById ("mobilepop"). innerHTML = numberstring}
+}
+
+function getUrlVars () {
+    var vars = {};
+    var parts = window.location.href.replace (/ [? &] + ([^ = &] +) = ([^ &] *) / gi, function (m, key, value) {
+        vars [ключ] = значение;
+    });
+    вернуть вары;
+}
+
+
+
+функция сейчас (год, месяц, число, часы, минуты, секунды) {       
+startdatum = новая дата (год, месяц, число, часы, минуты, секунды)
+
+var tot2011 = getUrlVars () ["tot2011"];
+var growthpersecond = getUrlVars () ["GPS"];
+var title = getUrlVars () ["название"];
+
+document.getElementById ("заголовок"). innerHTML = decodeURI (заголовок);
+
+
+/ * var tot2011 = 5400000000.0
+var growthpersecond = 19,03 * /
+
+nu = новая дата ()                
+startdatum2011 = новая дата (2011,1,1)                            
+totalnow = (nu.getTime () - startdatum2011.getTime ()) / 1000.0 * рост в секунду + parseFloat (tot2011)
+ChangeValue (totalnow, 1);
+
+
+timerID = setTimeout ("сейчас (startdatum.getYear (), startdatum.getMonth (), startdatum.getDate (), startdatum.getHours (), startdatum.getMinutes (), startdatum.getSeconds ())", 200)
+}
+
+window.onload = maind
+</script>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+Приблизительное количество <span id = "title"> </span>
+<br />
+
+<div id = "mobilepop" style = "font-weight: bold; font-size: 128;"> </div>
+
+<br />
+
+
+
+</body>
+</html>
