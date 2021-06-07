@@ -35,9 +35,12 @@ div {
     /*border-radius: 5px;*/
     /*display: inline-block;*/
     color: #333333;
-    padding-top: 7vh;
     /*-webkit-box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);*/
     /*animation: bkgd 50s infinite;*/
+}
+
+.odometer {
+    margin-top: 70px;
 }
