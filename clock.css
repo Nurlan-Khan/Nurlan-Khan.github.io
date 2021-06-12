@@ -31,17 +31,17 @@
         padding-top: 5vh;
     }
     
-    h6 {
-        font-size: 30px;
+    h5 {
+        font-size: 20px;
         color: #333333;
         font-style: italic;
-        padding-top: 5vh;
+        padding-top: 0vh;
     }
     
-    h5 {
+    h6 {
         position: absolute;
         bottom: 20px;
-        right: 20px;
+        right: 45px;
         font-size: 15px;
     }
     
