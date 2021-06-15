@@ -41,7 +41,7 @@
     h6 {
         position: relative;
         text-align: right;
-        right: 45px;
+        padding-right: 15px;
         font-size: 15px;
     }
     
