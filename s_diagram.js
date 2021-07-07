@@ -1,7 +1,7 @@
-Highcharts.chart('container', {
+lHighcharts.chart('container', {
 
     chart: {
-        type: 'area',
+        type: 'line',
         animation: Highcharts.svg, // don't animate in old IE
         marginRight: 10,
 
