@@ -1,6 +1,6 @@
     body {
         text-align: center;
-        padding-top: 5vh;
+        padding-top: 25px;
         font-family: inherit;
         background: white;
         /*   background: radial-gradient(#55d37d 20%, #21c804); */
@@ -20,32 +20,40 @@
     #primechanie {
         font-size: 15px;
         color: grey;
-        padding-top: 3vh;
+        padding-top: 15px;
         font-style: italic
     }
     
     #razdel {
-        padding-top: 5vh;
+        padding-top: 50px;
     }
     
     div.diagram {
         position: relative;
-        color: grey;
         font-size: 12px;
-        max-width: 1200px;
-        min-width: 120px;
-        max-height: 1000px;
         height: auto;
         width: auto;
+        max-width: 1200px;
+        min-width: 120px;
+        max-height: 1800px;
+        min-height: 510px;
         margin: 0 auto;
+        padding-right: 15px;
         font-weight: 600;
         color: #333333;
     }
     
     div.note {
         position: relative;
-        padding-bottom: 5rem;
         font-size: 13px;
+        height: auto;
+        width: auto;
+        max-width: 1200px;
+        min-width: 120px;
+        margin: 0 auto;
+        padding-right: 15px;
+        padding-left: 5px;
+        text-align: justify;
         line-height: normal;
         font-weight: 400;
         color: grey;

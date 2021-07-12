@@ -1,4 +1,4 @@
-// Plan to have blank page 1 button, press to begin animation - start with green background and counter at 0, building up as graph is drawing, showing dates along the way, background is slowly changing to red/dark red until hits today, and show the below JS code for population.
+// https://codepen.io/bewley/pen/EKMXjR Plan to have blank page 1 button, press to begin animation - start with green background and counter at 0, building up as graph is drawing, showing dates along the way, background is slowly changing to red/dark red until hits today, and show the below JS code for population.
 
 function maind() {
     startdate = new Date()
