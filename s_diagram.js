@@ -37,7 +37,7 @@ Highcharts.chart('container', {
 
                     i++
 
-                }, 1000);
+                }, 500);
 
             }
         }
