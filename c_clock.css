@@ -38,7 +38,7 @@
         max-height: 1800px;
         min-height: 510px;
         margin: 0 auto;
-        padding-right: 12px;
+        padding-right: 10px;
         font-weight: 600;
         color: #333333;
     }
@@ -51,9 +51,9 @@
         max-width: 1200px;
         min-width: 120px;
         margin: 0 auto;
-        padding-right: 15px;
-        padding-left: 5px;
-        padding-bottom: 70px;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-bottom: 50px;
         text-align: justify;
         line-height: normal;
         font-weight: 400;
