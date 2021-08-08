@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     font-family: inherit;
     background: white;
     /*background: radial-gradient(#55d37d 20%, #21c804); */
@@ -118,7 +118,7 @@ h1 {
     /* Цвет текста */
     width: 100%;
     /* Ширина слоя */
-    font-size: 15px;
+    font-size: 14px;
     z-index: 100
     /* Поверх всех контейнеров */
 }

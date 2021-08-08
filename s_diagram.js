@@ -40,7 +40,7 @@ var myChart = Highcharts.chart('container', {
 
                     if (i == pop.length) {
                         clearInterval(id);
-                        alert("Hello! I am an alert box!!"); // всплывающее окно
+                        //alert("Hello! I am an alert box!!"); // всплывающее окно
                     } else {
                         var x = year[i], // current time
                             y = pop[i];
