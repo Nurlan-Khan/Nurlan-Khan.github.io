@@ -1,43 +1,55 @@
 <!DOCTYPE html>
-<html lang="ru">
+
+<html>
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Счетчик населения</title>
+    <title>Халық есептеуіші</title>
+    <!--в русской версии устанавливается title>Счетчик населения, в казахской title>Халық есептеуіші-->
+
     <link rel="stylesheet" type="text/css" href="c_main.css">
     <link rel="stylesheet" type="text/css" href="c_clock.css">
     <link rel="stylesheet" href="c_theme-default.css">
+
+
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <!--для установки флажков и прокрутки в диаграмме, которые предусмотрены в highstock. Необходимо объявить перед highcharts.js-->
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/annotations.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-
+    <!--Подключаем библиотеку-->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
 </head>
 
 <body>
-    <h1>Счетчик населения Республики Казахстан</h1>
-    <div id="odometer_id" class="odometer"></div>
-    <p id="oboznachenie">человек</p>
-    <p id="primechanie"><i>Оценка текущей численности населения основана на данных Бюро национальной статистики Республики Казахстан.<br> Оценка неофициальная</i></p>
-    <p id="razdel">
-        <div id="container" class="diagram" style="text-align: center"></div>
 
-        <div class="note">
-            Чтобы посмотреть конкретный исторический период, на графике нажмите и проведите мышью (растяните пальцами) в районе интересующего Вас временного диапазона. Для возврата графика в исходное состояние, нажмите на появившуюся справа вверху кнопку "Reset zoom"
-        </div>
-
-    </p>
-
-    <div id="footer">
-        Нурлан Ханжигитов, N.Khanzhigitov@gmail.com
-        <!--&copy;-->
+    <div class="lang_link">
+        <a href="/" id="kz" class="active">ҚАЗ</a>
+        <a href="/ru" id="ru">РУС</a>
+        <!--в русской версии class="active" устанавливается по id="ru", в казахской по id="kz"-->
     </div>
 
+    <h1 text=zagolovok></h1>
+    <div id="odometer_id" class="odometer"></div>
+    <p id="ed_izm_id" text="ed_izm"></p>
+    <p id="primech_id"><i text="primech"></i></p>
+
+    <div id="razdel_1_id">
+        <div id="container"></div>
+        <!--<button id="button">Полноэкранный режим</button>-->
+
+        <p class="note" text="pojasnenie"></p>
+    </div>
+
+    <div id="footer" text="nizhn_colontitul"></div>
+    <!--&copy;-->
 
 </body>
 

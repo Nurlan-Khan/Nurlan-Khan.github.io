@@ -1,101 +1,124 @@
-    body {
-        text-align: center;
-        padding-top: 25px;
-        font-family: inherit;
-        background: white;
-        /*   background: radial-gradient(#55d37d 20%, #21c804); */
-    }
-    
-    h1 {
-        font-size: 30px;
-        color: #3984B9;
-        text-shadow: 1px 1px 2px grey;
-    }
-    
-    #oboznachenie {
-        font-size: 30px;
-        color: #333333;
-    }
-    
-    #primechanie {
-        font-size: 15px;
-        color: grey;
-        padding-top: 15px;
-        font-style: italic
-    }
-    
-    #razdel {
-        padding-top: 40px;
-    }
-    
-    div.diagram {
-        position: relative;
-        font-size: 12px;
-        height: auto;
-        width: auto;
-        max-width: 1200px;
-        min-width: 120px;
-        max-height: 1800px;
-        min-height: 510px;
-        margin: 0 auto;
-        padding-right: 10px;
-        font-weight: 600;
-        color: #333333;
-    }
-    
-    div.note {
-        position: relative;
-        font-size: 13px;
-        height: auto;
-        width: auto;
-        max-width: 1200px;
-        min-width: 120px;
-        margin: 0 auto;
-        padding-right: 10px;
-        padding-left: 10px;
-        padding-bottom: 55px;
-        text-align: justify;
-        line-height: normal;
-        font-weight: 400;
-        color: grey;
-    }
-    
-    #footer {
-        position: fixed;
-        /* Фиксированное положение */
-        left: 0;
-        bottom: 0;
-        /* Левый нижний угол */
-        padding: 10px;
-        /* Поля вокруг текста */
-        background: #489EE2;
-        /* Цвет фона */
-        color: #fff;
-        /* Цвет текста */
-        width: 100%;
-        /* Ширина слоя */
-        font-size: 15px;
-        z-index: 100
-        /* Поверх всех контейнеров */
-    }
-    
-    #odometer_id {
-        /*text-shadow: 1px 1px 2px #000000; */
-        position: relative;
-        /*margin: 40px 0; */
-        /*padding: 14px 16px;*/
-        font-size: 60px;
-        line-height: 55px;
-        font-weight: 600;
-        /*border-radius: 5px;*/
-        /*display: inline-block;*/
-        color: #333333;
-        /*-webkit-box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);
+body {
+    text-align: center;
+    padding-top: 20px;
+    font-family: inherit;
+    background: white;
+    /*background: radial-gradient(#55d37d 20%, #21c804); */
+}
+
+a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #333333;
+    display: inline-block;
+    /*background-color: lavender;*/
+    padding: 15px;
+}
+
+.lang_link {
+    position: relative;
+    width: auto;
+    max-width: 1200px;
+    min-width: 120px;
+    /*background-color: grey;*/
+    margin: 0 auto;
+    text-align: right;
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Размер шрифта */
+    color: red;
+    /* Цвет ссылки */
+}
+
+a.active {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 30px;
+    color: #3984B9;
+    text-shadow: 1px 1px 2px grey;
+}
+
+#odometer_id {
+    /*text-shadow: 1px 1px 2px #000000; */
+    position: relative;
+    /*margin: 40px 0; */
+    /*padding: 14px 16px;*/
+    font-size: 60px;
+    line-height: 55px;
+    font-weight: 600;
+    /*border-radius: 5px;*/
+    /*display: inline-block;*/
+    color: #333333;
+    /*-webkit-box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);*/
-        /*animation: bkgd 50s infinite;*/
-    }
-    
-    .odometer {
-        margin-top: 40px;
-    }
+    /*animation: bkgd 50s infinite;*/
+    margin-top: 40px;
+}
+
+#ed_izm_id {
+    font-size: 30px;
+    color: #333333;
+}
+
+#primech_id {
+    font-size: 15px;
+    color: grey;
+    padding-top: 15px;
+    font-style: italic
+}
+
+#razdel_1_id {
+    position: relative;
+    padding-top: 40px;
+    height: auto;
+    width: auto;
+    max-width: 1200px;
+    min-width: 120px;
+    margin: 0 auto;
+    padding-right: 10px;
+}
+
+#container {
+    position: relative;
+    font-size: 12px;
+    max-height: 1800px;
+    min-height: 510px;
+    font-weight: 600;
+    color: #333333;
+    text-align: center;
+}
+
+.note {
+    position: relative;
+    font-size: 13.5px;
+    padding-left: 10px;
+    padding-bottom: 55px;
+    text-align: justify;
+    line-height: normal;
+    font-weight: 400;
+    color: grey;
+}
+
+#footer {
+    position: fixed;
+    /* Фиксированное положение */
+    left: 0;
+    bottom: 0;
+    /* Левый нижний угол */
+    padding: 10px;
+    /* Поля вокруг текста */
+    background: #489EE2;
+    /* Цвет фона */
+    color: #fff;
+    /* Цвет текста */
+    width: 100%;
+    /* Ширина слоя */
+    font-size: 15px;
+    z-index: 100
+    /* Поверх всех контейнеров */
+}
