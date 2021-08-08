@@ -35,12 +35,12 @@ function now(year, month, date, hours, minutes, seconds) {
 
     /* после получения новых данных на 1 число, меняем "var now" (1 мая), var now2 и месяц в schuldstartdatum (1 мая) */
 
-    var now = 18962892.0 /* 1 мая, текущая фактическая численность на 1 число */
-    var now2 = 19007850.0 /* 1 июля, прогноз на 1 число через 2 месяца (численность, к которой будет стремиться счетчик) */
+    var now = 19009610.0 /* 1 июля, текущая фактическая численность на 1 число */
+    var now2 = 19052963.0 /* 1 сентября, прогноз на 1 число через 2 месяца (численность, к которой будет стремиться счетчик) */
     var groeipercentage = (now2 - now) / now * 100
     var groeiperseconde = (now * (groeipercentage / 100)) / 60.0 / 24.0 / 60.0 / 60.0
     nu = new Date()
-    schuldstartdatum = new Date(2021, 4, 1) /* (год, месяц, число), дата, от которой идет отсчет счетчика,"4" это май*/
+    schuldstartdatum = new Date(2021, 6, 1) /* (год, месяц, число), дата, от которой идет отсчет счетчика,"6" это июль*/
     secondenoppagina = (nu.getTime() - startdatum.getTime()) / 1000
     totaleschuld = (nu.getTime() - schuldstartdatum.getTime()) / 1000 * groeiperseconde + now
     ChangeValue(totaleschuld, 1);
