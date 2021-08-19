@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="c_theme-default.css">
 
 
+    <!-- стили модального окна -->
+    <link rel="stylesheet" type="text/css" href="c_style-modal.css">
+
+
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <!--для установки флажков и прокрутки в диаграмме, которые предусмотрены в highstock. Необходимо объявить перед highcharts.js-->
 
@@ -26,9 +30,25 @@
     <!--Подключаем библиотеку-->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
+
 </head>
 
 <body>
+
+    <!--<модальное окно>-->
+
+    <div class="modal_win">
+        <a id="overlay" class="button" href="#openmodal">Нажми меня!</a>
+        <div id="openmodal" class="modalbg" data-modal="modal">
+            <div class="dialog">
+                <a href="#close" class="close">X</a>
+                <h2>2021 жылғы 20 маусымға Қазақстан Республикасында<br> 19 миллион адам</h2>
+                <a href="https://stat.gov.kz/news/ESTAT426352" id="ru">ҚР Ұлттық статистика бюросының баспасөз хабарламасы</a>
+            </div>
+            <img src="126406090_5854001_.gif" border=0 width=auto>
+        </div>
+    </div>
+
 
     <div class="lang_link">
         <a href="/" id="kz" class="active">ҚАЗ</a>
@@ -37,6 +57,8 @@
     </div>
 
     <h1 text=zagolovok></h1>
+
+
     <div id="odometer_id" class="odometer"></div>
     <p id="ed_izm_id" text="ed_izm"></p>
     <p id="primech_id"><i text="primech"></i></p>
@@ -48,10 +70,21 @@
         <p class="note" text="pojasnenie"></p>
     </div>
 
+
     <div id="footer" text="nizhn_colontitul"></div>
     <!--&copy;-->
 
+
+    <!--<script type="text/javascript">
+        const delay_popup = 5000;
+        //setTimeout("document.getElementById('overlay').style.visibility='visible'", delay_popup);
+        setTimeout(function() { // таймер-планировщик
+            document.getElementById('overlay').click(); // вызвать клик на кнопку
+        }, delay_popup); // через две секунды
+    </script>-->
+
 </body>
+
 
 <script src="s_global.js "></script>
 <script src="s_odometer.js "></script>

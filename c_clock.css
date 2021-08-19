@@ -6,7 +6,7 @@ body {
     /*background: radial-gradient(#55d37d 20%, #21c804); */
 }
 
-a {
+.lang_link a {
     font-size: 16px;
     text-decoration: none;
     color: #333333;
@@ -25,14 +25,14 @@ a {
     text-align: right;
 }
 
-a:hover {
+.lang_link a:hover {
     text-decoration: underline;
     /* Размер шрифта */
     color: red;
     /* Цвет ссылки */
 }
 
-a.active {
+.lang_link a.active {
     font-weight: bold;
 }
 
@@ -110,7 +110,7 @@ h1 {
     left: 0;
     bottom: 0;
     /* Левый нижний угол */
-    padding: 10px;
+    padding: 10px 5px;
     /* Поля вокруг текста */
     background: #489EE2;
     /* Цвет фона */

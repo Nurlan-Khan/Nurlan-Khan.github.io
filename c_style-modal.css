@@ -1,0 +1,130 @@
+body {
+    width: 100%;
+}
+
+.modal_win {
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* Базовые стили затемнения и модального окна */
+
+.modalbg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* Цвет фона затемнения */
+    background: rgba(0, 0, 0, 0);
+    visibility: hidden;
+    z-index: 999;
+    /* Устанавливаем эффект перехода */
+    -moz-transition: all 2s ease-out;
+    -webkit-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Формируем блок с содержанием */
+
+.dialog {
+    max-width: 600px;
+    width: 85%;
+    /*установил свойство width Ширина блока */
+    font-family: Helvetica;
+    font-size: 100%;
+    position: relative;
+    top: -1000px;
+    margin: 10% auto;
+    padding: 5px 20px 20px 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    /* Скругляем угы */
+    border-radius: 10px;
+    background: #fefefe;
+    /* Добавляем тени */
+    box-shadow: 0 0 10px #000000;
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    z-index: 1000;
+}
+
+.modalbg:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background: rgba(4, 10, 30, 0.8);
+    /* Устанавливаем эффект перехода */
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+.modalbg:target .dialog {
+    top: 50px;
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+
+/*** Кнопка закрытия ***/
+
+.close {
+    background-color: rgba(61, 61, 61, 0.8);
+    border: 2px solid #ccc;
+    color: #FFFFFF;
+    line-height: 20px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -12px;
+    width: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: normal;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000000;
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.modalbg img {
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: -8.3% auto;
+    z-index: 1005;
+    /* Устанавливаем эффект перехода */
+    -moz-transition: all 0s ease-out;
+    -webkit-transition: all 0s ease-out;
+    -o-transition: all 0s ease-out;
+    transition: all 0s ease-out;
+    pointer-events: none;
+}
+
+#overlay {
+    display: none;
+}

@@ -41,10 +41,51 @@ var myChart = Highcharts.chart('container', {
                     if (i == pop.length) {
                         clearInterval(id);
                         //alert("Hello! I am an alert box!!"); // всплывающее окно
+                        //myFunction()
+
+                        //function myFunction() {
+                        //    location.href = "C:\Users\NurKhan\Documents\GitHub\N.Khanzhigitov\webref_highcharts_7_multi_modal\modal_form\modal-form.html"
+                        //    var x = location.href;
+                        //    x = document.getElementById("openmodal").innerHTML;
+                        //}
+
+                        //var link = document.querySelector('wrap');
+                        //var content = link.import.querySelector('#intro-dm');
+                        //document.body.appendChild(content.cloneNode(true));
+
+                        //const langEl = document.querySelector('.wrap');
+                        //const link = document.querySelectorAll('.modalbg');
+
+                        //link.forEach(el => {
+                        //    el.addEventListener('click', () => {
+                        //        langEl.querySelector('.active').classList.remove('active');
+                        //        el.classList.add('active');
+                        //    });
+                        //});
+
+                        const delay_popup = 500;
+                        setTimeout(function() { // таймер-планировщик
+                            document.getElementById('overlay').click(); // вызвать клик на кнопку
+                        }, delay_popup); // через две секунды
+
+
+
                     } else {
                         var x = year[i], // current time
                             y = pop[i];
                         series.addPoint([y, x], true, false);
+
+
+
+
+
+                        if (x == 1950) {
+
+                        }
+
+
+
+
 
                     }
 
