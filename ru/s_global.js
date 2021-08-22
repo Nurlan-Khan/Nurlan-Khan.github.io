@@ -40,3 +40,9 @@ link.forEach(el => {
         el.classList.add('active');
     });
 });
+
+window.addEventListener('resize', function() {
+    //обновление каждый раз при изменении размеров окна
+    "use strict";
+    window.location.reload();
+});

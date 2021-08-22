@@ -6,6 +6,10 @@ body {
     /*background: radial-gradient(#55d37d 20%, #21c804); */
 }
 
+#overlay {
+    display: none;
+}
+
 .lang_link a {
     font-size: 16px;
     text-decoration: none;
@@ -91,6 +95,7 @@ h1 {
     font-weight: 600;
     color: #333333;
     text-align: center;
+    pointer-events: none;
 }
 
 .note {

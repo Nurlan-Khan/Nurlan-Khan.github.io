@@ -4,6 +4,8 @@ var name_caption = 'Деректер дереккөзі: архив дерект
 var name_headerFormat = ' жыл';
 var name_pointFormat = ' мың адам';
 
+const lastseries = 71;
+
 
 var myChart = Highcharts.chart('container', {
 
@@ -12,7 +14,6 @@ var myChart = Highcharts.chart('container', {
         type: 'area',
         animation: Highcharts.svg, // don't animate in old IE
         marginRight: 10,
-
 
         zoomType: 'x',
         panning: true,
@@ -28,98 +29,10 @@ var myChart = Highcharts.chart('container', {
 
         events: {
             load: function() {
-
-                // set up the updating of the chart each second
-                var series = this.series[0];
-                var pop = [6591.6, 6812.9, 7078.3, 7185.6, 7355.4, 7700.8, 8282.7, 8568.2, 8876.0, 9278.4, 9754.8, 10236.0, 10723.0, 11192.0, 11449.0, 11771.0, 12047.0, 12323.0, 12588.0, 12800.0, 13006.0, 13211.0, 13430.0, 13637.0, 13847.0, 14063.0, 14209.0, 14349.0, 14501.0, 14682.3, 14819.2, 14971.2, 15127.0, 15282.1, 15434.8, 15586.0, 15730.9, 15899.2, 16047.7, 16190.9, 16295.3, 16355.5, 16451.7, 16426.5, 16334.9, 15956.7, 15675.8, 15480.6, 15188.2, 14955.1, 14901.6, 14865.6, 14851.1, 14866.8, 14951.2, 15074.8, 15219.3, 15396.9, 15571.5, 15982.4, 16203.3, 16440.5, 16673.9, 16910.2, 17160.9, 17415.7, 17669.9, 17918.2, 18157.3, 18395.6, 18631.8, 18879.6];
-                var year = [1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021];
-
-
-                let i = 0;
-                let id = setInterval(function run() {
-
-                    if (i == pop.length) {
-                        clearInterval(id);
-                        //alert("Hello! I am an alert box!!"); // всплывающее окно
-                        //myFunction()
-
-                        //function myFunction() {
-                        //    location.href = "C:\Users\NurKhan\Documents\GitHub\N.Khanzhigitov\webref_highcharts_7_multi_modal\modal_form\modal-form.html"
-                        //    var x = location.href;
-                        //    x = document.getElementById("openmodal").innerHTML;
-                        //}
-
-                        //var link = document.querySelector('wrap');
-                        //var content = link.import.querySelector('#intro-dm');
-                        //document.body.appendChild(content.cloneNode(true));
-
-                        //const langEl = document.querySelector('.wrap');
-                        //const link = document.querySelectorAll('.modalbg');
-
-                        //link.forEach(el => {
-                        //    el.addEventListener('click', () => {
-                        //        langEl.querySelector('.active').classList.remove('active');
-                        //        el.classList.add('active');
-                        //    });
-                        //});
-
-                        const delay_popup = 500;
-                        setTimeout(function() { // таймер-планировщик
-                            document.getElementById('overlay').click(); // вызвать клик на кнопку
-                        }, delay_popup); // через две секунды
-
-
-
-                    } else {
-                        var x = year[i], // current time
-                            y = pop[i];
-                        series.addPoint([y, x], true, false);
-
-
-
-
-
-                        if (x == 1950) {
-
-                        }
-
-
-
-
-
-                    }
-
-                    i++
-
-                }, 500);
-
+                //alert("Hello! I am an alert box!!"); // всплывающее окно
             },
-
-            click: function() {
-                this.update({
-                    chart: {
-                        width: document.getElementById('container').clientWidth,
-                        //document.documentElement.clientWidth;
-                        //window.innerHeight;
-                        height: document.getElementById('container').clientHeight,
-
-                    }
-                });
-            },
-
-            //            chart: {
-            //                renderTo: document.getElementById('container')
-            //            },
-
-            render: function() {
-                points = this.series[0].points;
-                this.tooltip.refresh(points[points.length - 1]);
-
-                //document.getElementById("container").style.width = "auto"
-            }
-        }
+        },
     },
-
 
     caption: {
         text: '<em>' + name_caption + '</em>'
@@ -148,15 +61,16 @@ var myChart = Highcharts.chart('container', {
     },
 
 
-
     tooltip: {
-
+        enabled: true,
+        followPointer: false,
+        valueDecimals: 1,
         headerFormat: '{point.x:.0f} ' + name_headerFormat + ' <br>',
         pointFormat: '<b>{point.y}</b><br/>',
         /*'{series.name}: <b>{point.y}</b><br/>' */
         valueSuffix: name_pointFormat,
         shared: true,
-        stickOnContact: true
+        stickOnContact: true,
 
     },
 
@@ -211,16 +125,125 @@ var myChart = Highcharts.chart('container', {
 
     },
 
+    plotOptions: {
+        series: {
+            marker: {
+
+                enabledThreshold: 2
+
+            }
+        }
+    },
+
     series: [{
         name: 'Население',
         keys: ['y', 'x'],
+
+        dataLabels: {
+            enabled: true,
+            color: '#aa0000',
+            style: {
+                visibility: 'hidden',
+                fontSize: '14px'
+            }
+        },
         data: [
-            /*            [6591.6, 1950],
-                        [6812.9, 1951],
-                        [7078.3, 1952],
-                        [7185.6, 1953],
-                        [7355.4, 1954]  */
+            [6591.6, 1950],
+            [6812.9, 1951],
+            [7078.3, 1952],
+            [7185.6, 1953],
+            [7355.4, 1954],
+            [7700.8, 1955],
+            [8282.7, 1956],
+            [8568.2, 1957],
+            [8876.0, 1958],
+            [9278.4, 1959],
+            [9754.8, 1960],
+            [10236.0, 1961],
+            [10723.0, 1962],
+            [11192.0, 1963],
+            [11449.0, 1964],
+            [11771.0, 1965],
+            [12047.0, 1966],
+            [12323.0, 1967],
+            [12588.0, 1968],
+            [12800.0, 1969],
+            [13006.0, 1970],
+            [13211.0, 1971],
+            [13430.0, 1972],
+            [13637.0, 1973],
+            [13847.0, 1974],
+            [14063.0, 1975],
+            [14209.0, 1976],
+            [14349.0, 1977],
+            [14501.0, 1978],
+            [14682.3, 1979],
+            [14819.2, 1980],
+            [14971.2, 1981],
+            [15127.0, 1982],
+            [15282.1, 1983],
+            [15434.8, 1984],
+            [15586.0, 1985],
+            [15730.9, 1986],
+            [15899.2, 1987],
+            [16047.7, 1988],
+            [16190.9, 1989],
+            [16295.3, 1990],
+            [16355.5, 1991],
+            [16451.7, 1992],
+            [16426.5, 1993],
+            [16334.9, 1994],
+            [15956.7, 1995],
+            [15675.8, 1996],
+            [15480.6, 1997],
+            [15188.2, 1998],
+            [14955.1, 1999],
+            [14901.6, 2000],
+            [14865.6, 2001],
+            [14851.1, 2002],
+            [14866.8, 2003],
+            [14951.2, 2004],
+            [15074.8, 2005],
+            [15219.3, 2006],
+            [15396.9, 2007],
+            [15571.5, 2008],
+            [15982.4, 2009],
+            [16203.3, 2010],
+            [16440.5, 2011],
+            [16673.9, 2012],
+            [16910.2, 2013],
+            [17160.9, 2014],
+            [17415.7, 2015],
+            [17669.9, 2016],
+            [17918.2, 2017],
+            [18157.3, 2018],
+            [18395.6, 2019],
+            [18631.8, 2020],
+            [18879.6, 2021],
         ],
+        animation: {
+            duration: 5500,
+            // Uses Math.easeOutBounce
+            easing: 'easeOutBounce',
+
+            complete: function() {
+                // событие завершения прорисовки диаграммы
+                //    myChart.update({
+                //        tooltip: {
+                //            enabled: true
+                //        }
+                //    });
+                document.getElementById('container').style.pointerEvents = "auto";
+                myChart.tooltip.refresh(myChart.series[0].points[lastseries]);
+
+                const delay_popup = 500;
+                setTimeout(function() { // таймер-планировщик
+                    document.getElementById('overlay').click(); // вызвать клик на кнопку
+                }, delay_popup); // через две секунды
+            }
+        },
+
+        animationLimit: Infinity,
 
         id: 'dataseries',
         zoneAxis: 'x',
@@ -609,3 +632,9 @@ if (m > n) {
 //document.getElementById('button').addEventListener('click', function() {
 //    myChart.fullscreen.toggle();
 //});
+
+
+setTimeout(function() { // таймер-планировщик
+
+
+}, delay_popup); // через две секунды
