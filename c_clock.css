@@ -67,13 +67,13 @@ h1 {
 #ed_izm_id {
     font-size: 30px;
     color: #333333;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #primech_id {
     font-size: 15px;
     color: grey;
-    padding-top: 15px;
+    padding-top: 0px;
     font-style: italic;
     margin-top: 15px;    
 }
