@@ -51,7 +51,7 @@ h1 {
     position: relative;
     /*margin: 40px 0; */
     /*padding: 14px 16px;*/
-    font-size: 50px;
+    font-size: 55px;
     line-height: 55px;
     font-weight: 600;
     /*border-radius: 5px;*/
@@ -61,13 +61,13 @@ h1 {
     -moz-box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);*/
     /*animation: bkgd 50s infinite;*/
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 #ed_izm_id {
     font-size: 30px;
     color: #333333;
-    margin-top: 6px;
+    margin-top: 4px;
 }
 
 #primech_id {
@@ -75,7 +75,7 @@ h1 {
     color: grey;
     padding-top: 0px;
     font-style: italic;
-    margin-top: 8px;    
+    margin-top: 6px;    
 }
 
 #razdel_1_id {
