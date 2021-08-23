@@ -67,11 +67,11 @@ h1 {
 #ed_izm_id {
     font-size: 30px;
     color: #333333;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 #primech_id {
-    font-size: 15px;
+    font-size: 12px;
     color: grey;
     padding-top: 0px;
     font-style: italic;
@@ -87,7 +87,7 @@ h1 {
     min-width: 120px;
     margin: 0 auto;
     padding-right: 10px;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 #container {
