@@ -61,12 +61,13 @@ h1 {
     -moz-box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 6px 6px 20px 2px rgba(0, 0, 0, 0.5);*/
     /*animation: bkgd 50s infinite;*/
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 #ed_izm_id {
     font-size: 30px;
     color: #333333;
+    margin-top: 20px;
 }
 
 #primech_id {
@@ -78,7 +79,7 @@ h1 {
 
 #razdel_1_id {
     position: relative;
-    padding-top: 40px;
+    padding-top: 20px;
     height: auto;
     width: auto;
     max-width: 1200px;
