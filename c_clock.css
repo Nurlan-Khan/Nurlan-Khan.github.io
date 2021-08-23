@@ -74,7 +74,8 @@ h1 {
     font-size: 15px;
     color: grey;
     padding-top: 15px;
-    font-style: italic
+    font-style: italic;
+    margin-top: 15px;    
 }
 
 #razdel_1_id {
