@@ -67,7 +67,7 @@ h1 {
 #ed_izm_id {
     font-size: 30px;
     color: #333333;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 #primech_id {
@@ -87,6 +87,7 @@ h1 {
     min-width: 120px;
     margin: 0 auto;
     padding-right: 10px;
+    margin-top: 5px;
 }
 
 #container {
